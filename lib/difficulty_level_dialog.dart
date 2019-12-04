@@ -43,14 +43,28 @@ class DifficultyLevelDialog extends StatelessWidget {
                 'Medium',
                 textAlign: TextAlign.center,
               ),
-              onTap: () {},
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SinglePlayerGame(
+                    difficulty: GameDifficulty.Medium,
+                  ),
+                ),
+              ),
             ),
             ListTile(
               title: Text(
                 'Hard',
                 textAlign: TextAlign.center,
               ),
-              onTap: () {},
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SinglePlayerGame(
+                    difficulty: GameDifficulty.Hard,
+                  ),
+                ),
+              ),
             ),
           ],
         ),
